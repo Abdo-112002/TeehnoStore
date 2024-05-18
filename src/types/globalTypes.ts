@@ -1,14 +1,14 @@
-export interface ProductTypes {
-    id: number;
-    title: string;
-    price: number;
-    description: string;
-    category: string;
-    image: string;
-    rating: Rating;
+export interface FetchFunctionParams<P = undefined | string> {
+    params?: P;
+    signal?: AbortSignal;
 }
 
-export interface Rating {
-    rate: number;
-    count: number;
+export interface CustomFetchHook<T, P> {
+    setData: (data: T[]) => void;
+    serviceFunction: ({
+        params,
+        signal,
+    }: FetchFunctionParams<P>) => Promise<T[]>;
+    params?: P;
+    isMutate: boolean;
 }
