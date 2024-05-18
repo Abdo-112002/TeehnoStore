@@ -1,9 +1,8 @@
 import { create } from "zustand";
-import { ProductTypes } from "../types/globalTypes";
+import { ProductTypes } from "../types/productsTypes";
 
 type initSateTypes = {
     products: ProductTypes[];
-    total: number;
 };
 
 type sateActionsTypes = {
@@ -12,7 +11,6 @@ type sateActionsTypes = {
 
 const initSate = {
     products: [],
-    total: 0,
 };
 
 export const useProductsStore = create<initSateTypes & sateActionsTypes>(
