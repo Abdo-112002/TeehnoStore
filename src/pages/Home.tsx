@@ -15,7 +15,7 @@ const Home = () => {
     });
 
     return (
-        <div>
+        <div className="bg-red-50">
             hello
         </div>
     )
