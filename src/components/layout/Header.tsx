@@ -5,7 +5,8 @@ import { FaFacebook, FaInstagram, FaPinterestP, FaTwitter, FaYoutube } from "rea
 import logo from '../../assets/Logo.svg';
 import { CiHeart } from "react-icons/ci";
 import { HiMiniMagnifyingGlass } from "react-icons/hi2";
-import NavBarLinks from "./NavBarLinks";
+import { NavBarLinks } from '../../components';
+
 
 
 const Header = () => {
