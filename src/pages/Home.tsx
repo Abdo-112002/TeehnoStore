@@ -3,6 +3,7 @@ import { useProductsStore } from "../store/AllProductsStore";
 import { HomeService } from "../services/HomeServices";
 import useFetchData from "../hooks/useFetchData";
 import { ProductTypes } from "../types/productsTypes";
+import { HeroSection, WhyUs } from "../components";
 
 const Home = () => {
 
@@ -15,9 +16,10 @@ const Home = () => {
     });
 
     return (
-        <div className="bg-red-50">
-            hello
-        </div>
+        <>
+            <HeroSection />
+            <WhyUs />
+        </>
     )
 }
 
