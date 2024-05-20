@@ -8,7 +8,7 @@ const useFetchData = <T, P = undefined | string>({
     params,
     isMutate,
 }: CustomFetchHook<T, P>) => {
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState<boolean>(isMutate ? true : false);
     const [error, setError] = useState<string>("");
 
     const getData = useCallback(
@@ -27,6 +27,7 @@ const useFetchData = <T, P = undefined | string>({
                 }
             } finally {
                 setLoading(false);
+                setError("");
             }
             // eslint-disable-next-line react-hooks/exhaustive-deps
     },[]);
