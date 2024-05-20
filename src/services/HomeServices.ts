@@ -8,7 +8,7 @@ export class HomeService {
     };
 
     static async getAllProducts(params?: FetchFunctionParams): Promise<ProductTypes[]> {
-        const response = await axiosApi.get(this.ENDPOINT.ALL_PRODUCTS, {
+        const response = await axiosApi.get(`${this.ENDPOINT.ALL_PRODUCTS}?${params?.params ? params?.params : ""}`, {
             signal : params?.signal,
         });
         return response.data;
