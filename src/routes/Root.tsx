@@ -1,6 +1,6 @@
 
 import { AppLayout } from "../components";
-import { Home } from "../pages";
+import { Home, Products } from "../pages";
 
 export const RootRoutes = {
     path: "/",
@@ -9,6 +9,10 @@ export const RootRoutes = {
         {
             index: true,
             element: <Home />,
+        },
+        {
+            path: "products",
+            element: <Products />,
         }
     ]
 }

@@ -6,6 +6,39 @@
         font-family: "Public Sans", sans-serif;
     }
 }
+
+@layer components {
+    .app-pagination {
+        width: fit-content;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .app-pagination li {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        border: 1px solid #e4e7e9;
+    }
+    .app-pagination li.selected {
+        background-color: #fa8232;
+        color: white;
+        border-color: #fa8232;
+    }
+    .app-pagination .next,
+    .app-pagination .previous {
+        border-color: #fa8232;
+        color: #fa8232;
+        font-size: 24px;
+        margin: 0px 15px;
+    }
+}
+
 .swiper {
     width: 100%;
     height: 100%;
