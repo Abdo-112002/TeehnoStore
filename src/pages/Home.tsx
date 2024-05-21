@@ -21,8 +21,8 @@ const Home = () => {
         <>
             <HeroSection />
             <WhyUs />
-            <div className="px-[100px]">
-                <BestOffers sectionTitle="أفضل العروض" showAll={"#"} />
+            <div className="px-4 md:px-[100px]">
+                <BestOffers sectionTitle="أفضل العروض" showAll={"/products"} />
             </div>
             <ShopOurDepartments />
             <OurSuggestedProducts
