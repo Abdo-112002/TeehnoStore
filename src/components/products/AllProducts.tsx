@@ -19,7 +19,7 @@ const AllProducts = () => {
     return (
         <>
 
-            <Pagenation items={products} itemsPerPage={10}>
+            <Pagenation<ProductTypes> items={products} itemsPerPage={10}>
                 {
                     (items) => {
                         return (
